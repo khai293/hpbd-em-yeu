@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Chúc Mừng Sinh Nhật Em ❤</title>
-<meta name="theme-color" content="#1c0a26">
-<meta property="og:title" content="Chúc Mừng Sinh Nhật Em ❤">
-<meta property="og:description" content="Một chiếc bánh sinh nhật 3D dành riêng cho em 🎂 — chạm vào nến để thổi và ước nhé!">
+<title>Chúc Mừng Sinh Nhật Hạnh ❤</title>
+<meta name="theme-color" content="#0c1f1a">
+<meta property="og:title" content="Chúc Mừng Sinh Nhật Hạnh ❤">
+<meta property="og:description" content="Một chiếc bánh matcha 3D dành riêng cho em 🎂 — chạm vào nến để thổi và ước theo sao băng nhé!">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:100%;height:100%;overflow:hidden;background:#140820;touch-action:none}
+  html,body{width:100%;height:100%;overflow:hidden;background:#081712;touch-action:none}
   body{font-family:'Be Vietnam Pro',sans-serif;color:#ffe9f2;-webkit-user-select:none;user-select:none}
   #stage{position:fixed;inset:0;z-index:0}
   #stage canvas{display:block}
@@ -24,15 +24,15 @@
   /* ---- Tiêu đề ---- */
   #titleWrap{position:fixed;top:3.2vh;left:0;right:0;text-align:center;z-index:5;pointer-events:none}
   #titleWrap h1{font-family:'Great Vibes',cursive;font-weight:400;
-    font-size:clamp(46px,9vw,96px);line-height:1.1;color:#ffdcec;
-    text-shadow:0 0 18px rgba(255,120,180,.65),0 0 60px rgba(255,80,160,.35);
+    font-size:clamp(46px,9vw,96px);line-height:1.1;color:#eafbea;
+    text-shadow:0 0 18px rgba(140,225,170,.7),0 0 60px rgba(90,205,140,.4);
     animation:glowPulse 3.2s ease-in-out infinite}
   #tenNguoiYeu{font-family:'Dancing Script',cursive;font-size:clamp(20px,4vw,34px);
     color:#ffe3a3;letter-spacing:.06em;margin-top:.1em;
     text-shadow:0 0 14px rgba(255,200,110,.55)}
   @keyframes glowPulse{
-    0%,100%{text-shadow:0 0 18px rgba(255,120,180,.65),0 0 60px rgba(255,80,160,.35)}
-    50%{text-shadow:0 0 26px rgba(255,140,195,.9),0 0 80px rgba(255,90,170,.5)}
+    0%,100%{text-shadow:0 0 18px rgba(140,225,170,.7),0 0 60px rgba(90,205,140,.4)}
+    50%{text-shadow:0 0 26px rgba(170,240,195,.95),0 0 84px rgba(100,215,150,.55)}
   }
 
   /* ---- Gợi ý ---- */
@@ -51,8 +51,8 @@
     transition:background .25s,transform .15s;white-space:nowrap}
   .btn:hover{background:rgba(255,255,255,.18)}
   .btn:active{transform:scale(.95)}
-  .btn.accent{background:rgba(255,105,165,.30);border-color:rgba(255,150,190,.6)}
-  .btn.accent:hover{background:rgba(255,105,165,.45)}
+  .btn.accent{background:rgba(105,195,135,.30);border-color:rgba(150,225,175,.6)}
+  .btn.accent:hover{background:rgba(105,195,135,.45)}
 
   /* ---- Lời chúc khi thổi hết nến ---- */
   #wishOverlay{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;
@@ -60,7 +60,7 @@
     pointer-events:none;opacity:0;transition:opacity 1.6s ease}
   #wishOverlay.show{opacity:1}
   #wishOverlay .big{font-family:'Great Vibes',cursive;font-size:clamp(40px,8vw,84px);
-    color:#ffe1ef;text-shadow:0 0 24px rgba(255,120,180,.85),0 0 90px rgba(255,80,160,.5);
+    color:#eafff0;text-shadow:0 0 24px rgba(140,230,175,.9),0 0 90px rgba(90,210,145,.55);
     line-height:1.15}
   #wishOverlay .sub{font-family:'Dancing Script',cursive;font-size:clamp(20px,4vw,32px);
     color:#ffe3a3;margin-top:14px;text-shadow:0 0 16px rgba(255,200,110,.6)}
@@ -73,28 +73,28 @@
     backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:16px}
   #letterModal.open{display:flex}
   #letterCard{position:relative;width:min(520px,94vw);max-height:82vh;overflow-y:auto;
-    background:linear-gradient(160deg,#fff9f1,#ffeef3);border-radius:18px;
-    padding:34px 30px 30px;color:#6b2340;
+    background:linear-gradient(160deg,#fbfff4,#ecf8ec);border-radius:18px;
+    padding:34px 30px 30px;color:#2f4a38;
     box-shadow:0 18px 70px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.35) inset}
   #letterCard h2{font-family:'Great Vibes',cursive;font-weight:400;
-    font-size:clamp(32px,6vw,44px);color:#d4386f;text-align:center;margin-bottom:14px}
+    font-size:clamp(32px,6vw,44px);color:#3f7d54;text-align:center;margin-bottom:14px}
   #letterBody{font-size:15.5px;line-height:1.85;font-weight:300;min-height:120px;white-space:pre-wrap}
   #letterBody b{font-weight:600}
   #letterSign{margin-top:18px;text-align:right;font-family:'Dancing Script',cursive;
-    font-size:22px;color:#c22e63}
+    font-size:22px;color:#3f7d54}
   #letterClose{position:absolute;top:10px;right:14px;border:none;background:none;
-    font-size:26px;color:#c86;cursor:pointer;line-height:1}
-  .cursorBar{display:inline-block;width:2px;height:1em;background:#d4386f;
+    font-size:26px;color:#7a9;cursor:pointer;line-height:1}
+  .cursorBar{display:inline-block;width:2px;height:1em;background:#3f7d54;
     vertical-align:-0.15em;animation:blink .8s step-end infinite}
   @keyframes blink{50%{opacity:0}}
 
   /* ---- Màn hình chờ ---- */
-  #loader{position:fixed;inset:0;z-index:50;background:#140820;
+  #loader{position:fixed;inset:0;z-index:50;background:#081712;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     transition:opacity 1s ease}
   #loader.hide{opacity:0;pointer-events:none}
   #loader .heart{font-size:54px;animation:beat 1s ease-in-out infinite}
-  #loader p{margin-top:16px;font-weight:300;color:#ffb8d4;letter-spacing:.1em;font-size:14px}
+  #loader p{margin-top:16px;font-weight:300;color:#b8e8c8;letter-spacing:.1em;font-size:14px}
   @keyframes beat{0%,100%{transform:scale(1)}30%{transform:scale(1.25)}60%{transform:scale(1.05)}}
 </style>
 </head>
@@ -105,7 +105,7 @@
 
 <div id="titleWrap">
   <h1>Happy Birthday</h1>
-  <div id="tenNguoiYeu">♥ Em Yêu ♥</div>
+  <div id="tenNguoiYeu">♥ Hạnh ♥</div>
 </div>
 
 <div id="hint">Kéo để xoay chiếc bánh &nbsp;•&nbsp; Chạm vào ngọn nến để thổi 💨</div>
@@ -132,8 +132,8 @@
 </div>
 
 <div id="loader">
-  <div class="heart">❤</div>
-  <p>Đang thắp nến chờ em...</p>
+  <div class="heart">🍵</div>
+  <p>Đang pha matcha &amp; thắp nến chờ em...</p>
 </div>
 
 <script>
@@ -144,13 +144,14 @@
    - loiChuc: các dòng chữ trong tấm thiệp
    ============================================================ */
 window.CAKE_CONFIG = {
-  ten: "Em Yêu",
+  ten: "Hạnh",
   soNen: 7,
   loiChuc: [
-    "Chúc mừng sinh nhật em — người con gái anh thương nhất trên đời.",
+    "Chúc mừng sinh nhật Hạnh — người con gái anh thương nhất trên đời.",
     "Cảm ơn em đã đến bên anh, và làm những ngày bình thường nhất cũng trở nên lấp lánh.",
+    "Anh chọn bánh matcha — vị ngọt dịu dàng, giống hệt cách em làm cuộc sống của anh dịu lại.",
     "Tuổi mới, anh mong em thật khỏe mạnh, cười thật nhiều, và mọi điều ước đều thành sự thật.",
-    "Anh sẽ luôn ở đây, nắm tay em đi qua thật nhiều mùa sinh nhật nữa nhé.",
+    "Nếu em thấy sao băng bay qua, hãy nhắm mắt ước một điều nhé — anh sẽ cùng em thực hiện nó.",
     "Yêu em nhiều lắm ❤"
   ],
   kyTen: "— Người luôn yêu em ❤"
@@ -202,18 +203,18 @@ const scene = new THREE.Scene();
   const c = document.createElement('canvas'); c.width = 2; c.height = 512;
   const g = c.getContext('2d');
   const grad = g.createLinearGradient(0, 0, 0, 512);
-  grad.addColorStop(0, '#2b1038');
-  grad.addColorStop(0.55, '#1c0a26');
-  grad.addColorStop(1, '#0a0410');
+  grad.addColorStop(0, '#153529');
+  grad.addColorStop(0.55, '#0c211a');
+  grad.addColorStop(1, '#04100b');
   g.fillStyle = grad; g.fillRect(0, 0, 2, 512);
   const bg = new THREE.CanvasTexture(c);
   bg.colorSpace = THREE.SRGBColorSpace;
   scene.background = bg;
 }
-scene.fog = new THREE.Fog(0x1c0a26, 26, 58);
+scene.fog = new THREE.Fog(0x0c211a, 26, 58);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 200);
-camera.position.set(8.4, 6.6, 10.8);
+camera.position.set(9.3, 7.1, 11.9);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.target.set(0, 3.1, 0);
@@ -228,7 +229,7 @@ controls.autoRotate = true;
 controls.autoRotateSpeed = 0.8;
 
 /* ------------------ Ánh sáng ------------------ */
-scene.add(new THREE.HemisphereLight(0xffd9ec, 0x2a1020, 0.8));
+scene.add(new THREE.HemisphereLight(0xe4ffe9, 0x0e241a, 0.8));
 
 const keyLight = new THREE.DirectionalLight(0xfff0dd, 2.4);
 keyLight.position.set(6, 11, 7);
@@ -240,8 +241,8 @@ keyLight.shadow.camera.far = 40;
 keyLight.shadow.bias = -0.0006;
 scene.add(keyLight);
 
-const rimPink = new THREE.PointLight(0xff5f9e, 34, 45, 2); rimPink.position.set(-8, 5, -6); scene.add(rimPink);
-const rimBlue = new THREE.PointLight(0x8a6bff, 26, 45, 2); rimBlue.position.set(8, 4, -8); scene.add(rimBlue);
+const rimMint = new THREE.PointLight(0x53e0a8, 32, 45, 2); rimMint.position.set(-8, 5, -6); scene.add(rimMint);
+const rimBlue = new THREE.PointLight(0x5b8cff, 28, 45, 2); rimBlue.position.set(8, 4, -8); scene.add(rimBlue);
 
 const candleLight = new THREE.PointLight(0xffb45e, 0, 13, 2);
 scene.add(candleLight);
@@ -255,12 +256,12 @@ function canvasTexture(size, draw) {
   return t;
 }
 
-// Mặt bàn gỗ hồng ấm
+// Mặt bàn nhung xanh rêu sẫm
 const tableTex = canvasTexture(512, (g, s) => {
   const grad = g.createRadialGradient(s/2, s/2, s*0.05, s/2, s/2, s*0.55);
-  grad.addColorStop(0, '#5b2740');
-  grad.addColorStop(0.6, '#41192e');
-  grad.addColorStop(1, '#241019');
+  grad.addColorStop(0, '#2e4d3d');
+  grad.addColorStop(0.6, '#1b3226');
+  grad.addColorStop(1, '#0e1a12');
   g.fillStyle = grad; g.fillRect(0, 0, s, s);
   g.globalAlpha = 0.05;
   for (let i = 0; i < 900; i++) {
@@ -292,6 +293,23 @@ const strawberryTex = canvasTexture(128, (g, s) => {
     g.beginPath(); g.ellipse(px, py, 2, 3.2, 0, 0, Math.PI*2); g.fill();
   }
 });
+
+// Kem lấm tấm bột matcha (hoặc vani) — nhìn như bánh thật
+function speckleTex(base, dot) {
+  const t = canvasTexture(256, (g, s) => {
+    g.fillStyle = base; g.fillRect(0, 0, s, s);
+    g.fillStyle = dot;
+    for (let i = 0; i < 150; i++) {
+      g.globalAlpha = 0.12 + Math.random() * 0.3;
+      g.beginPath();
+      g.arc(Math.random()*s, Math.random()*s, 0.8 + Math.random()*2.1, 0, Math.PI*2);
+      g.fill();
+    }
+    g.globalAlpha = 1;
+  });
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  return t;
+}
 
 // Đốm sáng tròn (hạt bokeh / lửa / khói)
 function glowSpriteTex(inner, outer) {
@@ -339,13 +357,31 @@ for (let i = 0; i < 40; i++) {
   b.castShadow = true;
   cake.add(b);
 }
+// dây đèn ấm rủ quanh mép mâm, nhấp nháy dịu
+const bulbMats = [0xffd98c, 0xbff2c8, 0xfff4e0].map(c =>
+  new THREE.MeshBasicMaterial({ color: c, transparent: true, opacity: 0.9 }));
+{
+  const bulbGeo = new THREE.SphereGeometry(0.055, 8, 8);
+  const swags = 12;
+  let bi = 0;
+  for (let s = 0; s < swags; s++) {
+    const a0 = s / swags * Math.PI * 2, a1 = (s + 1) / swags * Math.PI * 2;
+    for (let k = 1; k <= 6; k++) {
+      const f = k / 7;
+      const a = a0 + (a1 - a0) * f;
+      const b = new THREE.Mesh(bulbGeo, bulbMats[bi++ % 3]);
+      b.position.set(Math.sin(a) * 4.34, 1.14 - 0.38 * Math.sin(Math.PI * f), Math.cos(a) * 4.34);
+      cake.add(b);
+    }
+  }
+}
 const BASE_Y = 1.23; // mặt trên của mâm
 
 /* ------------------ Các tầng bánh & kem chảy ------------------ */
-function makeTier(radius, height, yBottom, bodyColor, dripColor) {
+function makeTier(radius, height, yBottom, bodyCol, bodyDot, dripCol, dripDot) {
   const g = new THREE.Group();
-  const bodyMat = new THREE.MeshStandardMaterial({ color: bodyColor, roughness: 0.52 });
-  const dripMat = new THREE.MeshStandardMaterial({ color: dripColor, roughness: 0.38 });
+  const bodyMat = new THREE.MeshStandardMaterial({ map: speckleTex(bodyCol, bodyDot), roughness: 0.52 });
+  const dripMat = new THREE.MeshStandardMaterial({ map: speckleTex(dripCol, dripDot), roughness: 0.38 });
 
   const body = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius*1.02, height, 64), bodyMat);
   body.position.y = yBottom + height/2;
@@ -392,12 +428,12 @@ function makeTier(radius, height, yBottom, bodyColor, dripColor) {
   return topY;
 }
 
-const TOP1 = makeTier(2.9, 1.55, BASE_Y, 0xfff3e4, 0xff85ad);
-const TOP2 = makeTier(2.15, 1.45, TOP1, 0xffd9e7, 0xfff6ea);
-const TOP3 = makeTier(1.45, 1.35, TOP2, 0xfff3e4, 0xff6fa5);
+const TOP1 = makeTier(2.9, 1.55, BASE_Y, '#fdf8ec', '#e6dcc0', '#8db474', '#5f8a4b');
+const TOP2 = makeTier(2.15, 1.45, TOP1, '#cbe0af', '#a5bf82', '#fffdf6', '#e6dfc9');
+const TOP3 = makeTier(1.45, 1.35, TOP2, '#fdf8ec', '#e6dcc0', '#729f5b', '#4e7440');
 
 /* ------------------ Kem tươi xoáy ------------------ */
-function creamDollop(scale) {
+function creamDollop(scale, color = 0xfffdf7) {
   const pts = [];
   for (let i = 0; i <= 24; i++) {
     const t = i / 24;
@@ -406,16 +442,16 @@ function creamDollop(scale) {
   }
   const m = new THREE.Mesh(
     new THREE.LatheGeometry(pts, 26),
-    new THREE.MeshStandardMaterial({ color: 0xfffdf7, roughness: 0.34 })
+    new THREE.MeshStandardMaterial({ color, roughness: 0.34 })
   );
   m.scale.setScalar(scale);
   m.castShadow = true;
   return m;
 }
-// vòng kem tầng dưới + tầng trên cùng
+// vòng kem xen kẽ trắng — matcha ở tầng dưới + tầng trên cùng
 for (let i = 0; i < 12; i++) {
   const a = i / 12 * Math.PI * 2 + 0.1;
-  const c = creamDollop(1);
+  const c = creamDollop(1, i % 2 ? 0xfffdf7 : 0xbdd79b);
   c.position.set(Math.sin(a)*2.45, TOP1 + 0.02, Math.cos(a)*2.45);
   cake.add(c);
   if (i % 3 === 0) { // hạt vàng trang trí trên kem
@@ -426,7 +462,7 @@ for (let i = 0; i < 12; i++) {
 }
 for (let i = 0; i < 8; i++) {
   const a = i / 8 * Math.PI * 2;
-  const c = creamDollop(0.8);
+  const c = creamDollop(0.8, i % 2 ? 0xfffdf7 : 0xbdd79b);
   c.position.set(Math.sin(a)*1.16, TOP3 + 0.02, Math.cos(a)*1.16);
   cake.add(c);
 }
@@ -484,8 +520,37 @@ for (let i = 0; i < 6; i++) {
   cake.add(c);
 }
 
+/* ------------------ Việt quất xanh (chấm phá xanh dương) ------------------ */
+const bbMats = [
+  new THREE.MeshStandardMaterial({ color: 0x51629f, roughness: 0.32 }),
+  new THREE.MeshStandardMaterial({ color: 0x3d4d8a, roughness: 0.32 })
+];
+function blueberryCluster(n) {
+  const g = new THREE.Group();
+  for (let i = 0; i < n; i++) {
+    const b = new THREE.Mesh(new THREE.SphereGeometry(0.085, 14, 14), bbMats[i % 2]);
+    const a = i / n * Math.PI * 2;
+    b.position.set(Math.sin(a) * 0.09 * (n > 1 ? 1 : 0), 0, Math.cos(a) * 0.09 * (n > 1 ? 1 : 0));
+    b.castShadow = true;
+    g.add(b);
+  }
+  return g;
+}
+for (let i = 0; i < 6; i++) {
+  const a = i / 6 * Math.PI * 2 + 0.42;
+  const c = blueberryCluster(2 + (i % 2));
+  c.position.set(Math.sin(a)*2.5, TOP1 + 0.13, Math.cos(a)*2.5);
+  cake.add(c);
+}
+for (let i = 0; i < 4; i++) {
+  const a = i / 4 * Math.PI * 2 + 0.4;
+  const c = blueberryCluster(2);
+  c.position.set(Math.sin(a)*1.14, TOP3 + 0.13, Math.cos(a)*1.14);
+  cake.add(c);
+}
+
 /* ------------------ Macaron quanh chân bánh ------------------ */
-const macColors = [0xffc7d8, 0xffe3b3, 0xd9c7ff, 0xc7e8d4, 0xffd1b8];
+const macColors = [0xbfd8a0, 0xfff4e0, 0xf4d9a0, 0xa8c6f0, 0xf6c9d8];
 for (let i = 0; i < 5; i++) {
   const a = i / 5 * Math.PI * 2 + 0.6;
   const g = new THREE.Group();
@@ -501,25 +566,36 @@ for (let i = 0; i < 5; i++) {
   cake.add(g);
 }
 
-/* ------------------ Tấm sô-cô-la "Happy Birthday" ------------------ */
+/* ------------------ Tấm sô-cô-la trắng khắc tên ------------------ */
 {
   const plaque = new THREE.Group();
   const back = new THREE.Mesh(new THREE.CylinderGeometry(0.66, 0.66, 0.06, 40),
-    new THREE.MeshStandardMaterial({ color: 0xfff0dc, roughness: 0.45 }));
+    new THREE.MeshStandardMaterial({ color: 0xfffbee, roughness: 0.45 }));
   back.rotation.x = Math.PI / 2;
   back.castShadow = true;
   plaque.add(back);
-  const faceTex = canvasTexture(512, (g, s) => {
-    g.fillStyle = '#fff3de'; g.beginPath(); g.arc(s/2, s/2, s/2, 0, Math.PI*2); g.fill();
-    g.strokeStyle = '#ff86ae'; g.lineWidth = 14;
+  const faceTex = canvasTexture(512, () => {});
+  function drawPlaque() {
+    const c = faceTex.image, g = c.getContext('2d'), s = c.width;
+    g.clearRect(0, 0, s, s);
+    g.fillStyle = '#fdfbef'; g.beginPath(); g.arc(s/2, s/2, s/2, 0, Math.PI*2); g.fill();
+    g.strokeStyle = '#8db474'; g.lineWidth = 14;
     g.beginPath(); g.arc(s/2, s/2, s/2 - 22, 0, Math.PI*2); g.stroke();
-    g.fillStyle = '#e0447a'; g.textAlign = 'center';
-    g.font = '74px "Great Vibes", cursive';
-    g.fillText('Happy', s/2, s/2 - 40);
-    g.fillText('Birthday', s/2, s/2 + 46);
-    g.fillStyle = '#ff5f92'; g.font = '54px serif';
-    g.fillText('❤', s/2, s/2 + 128);
-  });
+    g.strokeStyle = '#c9973f'; g.lineWidth = 3;
+    g.beginPath(); g.arc(s/2, s/2, s/2 - 40, 0, Math.PI*2); g.stroke();
+    g.textAlign = 'center';
+    g.fillStyle = '#4a7c59';
+    g.font = '52px "Great Vibes", cursive';
+    g.fillText('Happy Birthday', s/2, s/2 - 72);
+    g.fillStyle = '#3f7d54';
+    g.font = (TEN.length > 7 ? 84 : 108) + 'px "Great Vibes", cursive';
+    g.fillText(TEN, s/2, s/2 + 46);
+    g.fillStyle = '#e0447a'; g.font = '46px serif';
+    g.fillText('❤', s/2, s/2 + 122);
+    faceTex.needsUpdate = true;
+  }
+  drawPlaque();
+  document.fonts.ready.then(drawPlaque);
   const face = new THREE.Mesh(new THREE.CircleGeometry(0.63, 40),
     new THREE.MeshStandardMaterial({ map: faceTex, roughness: 0.4 }));
   face.position.z = 0.035;
@@ -529,25 +605,10 @@ for (let i = 0; i < 5; i++) {
   plaque.rotation.y = ang;
   plaque.rotation.x = -0.35;
   cake.add(plaque);
-  // vẽ lại khi font viết tay tải xong
-  document.fonts.ready.then(() => { faceTex.needsUpdate = true;
-    const c = faceTex.image, g = c.getContext('2d'), s = c.width;
-    g.clearRect(0,0,s,s);
-    g.fillStyle = '#fff3de'; g.beginPath(); g.arc(s/2, s/2, s/2, 0, Math.PI*2); g.fill();
-    g.strokeStyle = '#ff86ae'; g.lineWidth = 14;
-    g.beginPath(); g.arc(s/2, s/2, s/2 - 22, 0, Math.PI*2); g.stroke();
-    g.fillStyle = '#e0447a'; g.textAlign = 'center';
-    g.font = '74px "Great Vibes", cursive';
-    g.fillText('Happy', s/2, s/2 - 40);
-    g.fillText('Birthday', s/2, s/2 + 46);
-    g.fillStyle = '#ff5f92'; g.font = '54px serif';
-    g.fillText('❤', s/2, s/2 + 128);
-    faceTex.needsUpdate = true;
-  });
 }
 
 /* ------------------ Rắc cốm đường ------------------ */
-const sprinkleColors = [0xff6f9c, 0xffd166, 0x8ecae6, 0xb5e48c, 0xcdb4f6, 0xffffff];
+const sprinkleColors = [0x8fbf76, 0xffd166, 0xffffff, 0x6fa8ff, 0xb5e48c, 0xf6e7c1];
 const sprinkleGeo = new THREE.CapsuleGeometry(0.02, 0.07, 3, 6);
 const sprinkleMats = sprinkleColors.map(c => new THREE.MeshStandardMaterial({ color: c, roughness: 0.45 }));
 function scatterSprinkles(rMin, rMax, y, count) {
@@ -563,6 +624,21 @@ function scatterSprinkles(rMin, rMax, y, count) {
 scatterSprinkles(0.3, 2.1, TOP1 + 0.06, 60);
 scatterSprinkles(0.3, 1.5, TOP2 + 0.06, 44);
 scatterSprinkles(0.15, 0.95, TOP3 + 0.06, 30);
+
+// nhũ vàng ăn được lấp lánh trên mặt kem
+{
+  const glitterGeo = new THREE.OctahedronGeometry(0.035);
+  const zones = [[0.3, 2.2, TOP1], [0.3, 1.55, TOP2], [0.15, 1.0, TOP3]];
+  for (let i = 0; i < 42; i++) {
+    const z = zones[i % 3];
+    const a = Math.random() * Math.PI * 2;
+    const r = z[0] + Math.random() * (z[1] - z[0]);
+    const m = new THREE.Mesh(glitterGeo, goldMat);
+    m.position.set(Math.sin(a)*r, z[2] + 0.055, Math.cos(a)*r);
+    m.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, Math.random()*Math.PI);
+    cake.add(m);
+  }
+}
 
 /* ------------------ Topper trái tim vàng ------------------ */
 function heartShapeGeo(depth) {
@@ -596,7 +672,7 @@ function heartShapeGeo(depth) {
 /* ------------------ Nến & ngọn lửa ------------------ */
 const candles = [];
 const clickables = [];
-const candleStripeColors = ['#ff8fb3', '#f4c95a', '#9ad5c9', '#c3a6f2'];
+const candleStripeColors = ['#8fbf76', '#f4c95a', '#7fc8b0', '#a8c6f0'];
 const wickMat = new THREE.MeshStandardMaterial({ color: 0x2a1a10, roughness: 0.9 });
 const flameOuterMatProto = new THREE.MeshBasicMaterial({ color: 0xff9a3c, transparent: true, opacity: 0.92, blending: THREE.AdditiveBlending, depthWrite: false });
 const flameInnerMatProto = new THREE.MeshBasicMaterial({ color: 0xfff6c9, transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false });
@@ -669,16 +745,36 @@ function makeBokeh(count, size, colorsList) {
   scene.add(p);
   return p;
 }
-const bokehA = makeBokeh(190, 0.34, [0xff9ec4, 0xffd9a0, 0xffffff]);
-const bokehB = makeBokeh(120, 0.2, [0xffc7dd, 0xc9b8ff, 0xfff0c9]);
+const bokehA = makeBokeh(190, 0.34, [0xbfe8c8, 0xffd9a0, 0xffffff]);
+const bokehB = makeBokeh(120, 0.2, [0x9fd8b0, 0x9fb8ff, 0xfff0c9]);
+
+/* ------------------ Trăng tròn tỏa sáng ------------------ */
+{
+  const moon = new THREE.Mesh(new THREE.SphereGeometry(1.9, 32, 32),
+    new THREE.MeshBasicMaterial({ color: 0xfff3d6, fog: false }));
+  moon.position.set(-24, 16, -26);
+  scene.add(moon);
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: softDotTex, color: 0xffe9b8, transparent: true, opacity: 0.32,
+    blending: THREE.AdditiveBlending, depthWrite: false, fog: false
+  }));
+  halo.scale.setScalar(6.5);
+  halo.position.copy(moon.position);
+  scene.add(halo);
+}
 
 /* ------------------ Trái tim bay lơ lửng ------------------ */
 const floatHearts = [];
 {
   const geo = heartShapeGeo(3);
+  const heartCols = [
+    { c: 0xff87b3, e: 0xff4f8b },  // hồng
+    { c: 0x7fb0ff, e: 0x3b7bff }   // xanh dương
+  ];
   for (let i = 0; i < 12; i++) {
+    const hc = heartCols[i % 3 === 2 ? 1 : 0];
     const mat = new THREE.MeshStandardMaterial({
-      color: 0xff87b3, emissive: 0xff4f8b, emissiveIntensity: 0.55,
+      color: hc.c, emissive: hc.e, emissiveIntensity: 0.55,
       roughness: 0.4, transparent: true, opacity: 0.9
     });
     const h = new THREE.Mesh(geo, mat);
@@ -695,9 +791,13 @@ const floatHearts = [];
 const petals = [];
 {
   const geo = new THREE.PlaneGeometry(0.2, 0.14);
-  const mat = new THREE.MeshStandardMaterial({ color: 0xffaac6, roughness: 0.6, side: THREE.DoubleSide, transparent: true, opacity: 0.92 });
+  const petalMats = [
+    new THREE.MeshStandardMaterial({ color: 0xf6fff0, roughness: 0.6, side: THREE.DoubleSide, transparent: true, opacity: 0.92 }),
+    new THREE.MeshStandardMaterial({ color: 0xcfe8b8, roughness: 0.6, side: THREE.DoubleSide, transparent: true, opacity: 0.92 }),
+    new THREE.MeshStandardMaterial({ color: 0xffd9e4, roughness: 0.6, side: THREE.DoubleSide, transparent: true, opacity: 0.92 })
+  ];
   for (let i = 0; i < 38; i++) {
-    const p = new THREE.Mesh(geo, mat);
+    const p = new THREE.Mesh(geo, petalMats[i % 3]);
     const r = 3 + Math.random() * 11;
     const a = Math.random() * Math.PI * 2;
     p.position.set(Math.sin(a)*r, Math.random()*11, Math.cos(a)*r);
@@ -706,6 +806,52 @@ const petals = [];
     petals.push({ mesh: p, sp: 0.35 + Math.random()*0.5, ph: Math.random()*10, rx: (Math.random()-0.5)*2, rz: (Math.random()-0.5)*2 });
   }
 }
+
+/* ------------------ Đom đóm lập lòe quanh bánh ------------------ */
+const fireflies = [];
+for (let i = 0; i < 22; i++) {
+  const mat = new THREE.SpriteMaterial({
+    map: softDotTex, color: i % 3 ? 0xd9f7a0 : 0xffe9a0,
+    transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending, depthWrite: false
+  });
+  const s = new THREE.Sprite(mat);
+  s.scale.setScalar(0.16);
+  scene.add(s);
+  fireflies.push({
+    spr: s,
+    r: 4 + Math.random() * 4.5,
+    h: 1.5 + Math.random() * 5,
+    av: (0.08 + Math.random() * 0.25) * (Math.random() < 0.5 ? -1 : 1),
+    a0: Math.random() * Math.PI * 2,
+    ph: Math.random() * 10,
+    vs: 0.5 + Math.random()
+  });
+}
+
+/* ------------------ Sao băng & tia sáng (hệ hạt chung) ------------------ */
+const sparks = [];
+function spawnSpark(pos, vel, life, size, color, grav) {
+  if (sparks.length > 380) return;
+  const mat = new THREE.SpriteMaterial({
+    map: softDotTex, color, transparent: true, opacity: 0.9,
+    blending: THREE.AdditiveBlending, depthWrite: false
+  });
+  const s = new THREE.Sprite(mat);
+  s.position.copy(pos);
+  s.scale.setScalar(size);
+  scene.add(s);
+  sparks.push({ spr: s, vel, t: 0, life, grav });
+}
+let shootingStar = null, nextStarAt = 6;
+function launchShootingStar() {
+  const dir = Math.random() < 0.5 ? 1 : -1;
+  shootingStar = {
+    pos: new THREE.Vector3(-dir * 24, 12 + Math.random() * 3, -16 + Math.random() * 6),
+    vel: new THREE.Vector3(dir * 20, -5.5, 1.5),
+    t: 0, life: 1.6
+  };
+}
+let sparkleUntil = -1; // pháo bông từ topper tim khi thổi hết nến
 
 /* ------------------ Pháo giấy ------------------ */
 const CONF_N = 240;
@@ -718,7 +864,7 @@ const confetti = {
   const mat = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
   confetti.mesh = new THREE.InstancedMesh(geo, mat, CONF_N);
   confetti.mesh.visible = false;
-  const palette = [0xff5f92, 0xffd166, 0x74d3ae, 0x8ecae6, 0xcdb4f6, 0xffffff, 0xff9e6d];
+  const palette = [0x8fbf76, 0xffd166, 0x74d3ae, 0x6fa8ff, 0xfff4e0, 0xffffff, 0xf6c9d8];
   const c = new THREE.Color();
   for (let i = 0; i < CONF_N; i++) {
     confetti.mesh.setColorAt(i, c.set(palette[i % palette.length]));
@@ -758,7 +904,7 @@ function spawnSmoke(worldPos) {
 
 /* ------------------ Âm thanh (WebAudio) ------------------ */
 let actx = null, master = null, delaySend = null;
-let musicOn = false, musicTimer = null, mIdx = 0, mNext = 0;
+let musicOn = false, musicTimer = null, mIdx = 0, mNext = 0, bIdx = 0, bNext = 0;
 const BEAT = 0.62;
 const SEMI = { C:0,'C#':1,D:2,'D#':3,E:4,F:5,'F#':6,G:7,'G#':8,A:9,'A#':10,B:11 };
 function nFreq(n) {
@@ -770,6 +916,13 @@ const MELODY = [
   ['G4',.75],['G4',.25],['A4',1],['G4',1],['D5',1],['C5',2],
   ['G4',.75],['G4',.25],['G5',1],['E5',1],['C5',1],['B4',1],['A4',2],
   ['F5',.75],['F5',.25],['E5',1],['C5',1],['D5',1],['C5',2],['R',2]
+];
+// bè trầm rải hợp âm, tổng số phách khớp với giai điệu (27 phách)
+const BASSLINE = [
+  ['C3',3],['C3',3],
+  ['G2',3],['C3',3],
+  ['C3',3],['C3',3],['F2',1],
+  ['F2',2],['G2',2],['C3',2],['R',2]
 ];
 function initAudio() {
   if (actx) { if (actx.state === 'suspended') actx.resume(); return; }
@@ -812,11 +965,24 @@ function musicTick() {
     mNext += d * BEAT;
     mIdx = (mIdx + 1) % MELODY.length;
   }
+  while (bNext < actx.currentTime + 0.5) {
+    const [n, d] = BASSLINE[bIdx];
+    if (n !== 'R') {
+      const f = nFreq(n);
+      mbNote(f, bNext, 2.4, 0.1);
+      mbNote(f * 1.5, bNext + BEAT * 0.5, 1.8, 0.05);
+      mbNote(f * 2, bNext + BEAT, 1.6, 0.045);
+    }
+    bNext += d * BEAT;
+    bIdx = (bIdx + 1) % BASSLINE.length;
+  }
   musicTimer = setTimeout(musicTick, 200);
 }
 function startMusic() {
   initAudio();
-  musicOn = true; mIdx = 0; mNext = actx.currentTime + 0.12;
+  musicOn = true;
+  mIdx = 0; bIdx = 0;
+  mNext = bNext = actx.currentTime + 0.12;
   musicTick();
   musicBtn.textContent = '🔊 Nhạc: Bật';
 }
@@ -902,6 +1068,8 @@ function blowOut(ci) {
 function celebrate() {
   burstConfetti();
   fanfare();
+  sparkleUntil = tSim + 8;   // topper tim phun pháo bông
+  launchShootingStar();      // sao băng bay qua — ước nhanh nhé!
   wishOverlay.classList.add('show');
 }
 
@@ -957,14 +1125,14 @@ setTimeout(() => hintEl.classList.add('hide'), 9000);
 const clock = new THREE.Clock();
 let loaderHidden = false;
 let lightNow = 0;
+let tSim = 0;
 const tmpQ = new THREE.Quaternion();
 const tmpM = new THREE.Matrix4();
 const tmpS = new THREE.Vector3(1, 1, 1);
 
-function animate() {
-  requestAnimationFrame(animate);
-  const dt = Math.min(clock.getDelta(), 0.05);
-  const t = clock.elapsedTime;
+function tick(dt) {
+  tSim += dt;
+  const t = tSim;
 
   controls.update();
 
@@ -1048,8 +1216,64 @@ function animate() {
     s.spr.material.opacity = 0.4 * (1 - k);
   }
 
-  composer.render();
+  // dây đèn nhấp nháy dịu
+  bulbMats.forEach((m, i) => { m.opacity = 0.72 + 0.28 * Math.sin(t * 2.1 + i * 2.4); });
 
+  // đom đóm lượn quanh, lập lòe
+  for (const f of fireflies) {
+    const a = f.a0 + t * f.av;
+    f.spr.position.set(Math.sin(a) * f.r, f.h + Math.sin(t * f.vs + f.ph) * 0.8, Math.cos(a) * f.r);
+    f.spr.material.opacity = 0.22 + 0.6 * Math.abs(Math.sin(t * 1.7 + f.ph));
+  }
+
+  // sao băng thỉnh thoảng lướt qua trời
+  if (t > nextStarAt && !shootingStar) {
+    launchShootingStar();
+    nextStarAt = t + 9 + Math.random() * 9;
+  }
+  if (shootingStar) {
+    const st = shootingStar;
+    st.t += dt;
+    st.pos.addScaledVector(st.vel, dt);
+    for (let i = 0; i < 2; i++) {
+      spawnSpark(
+        st.pos.clone().add(new THREE.Vector3((Math.random()-0.5)*0.15, (Math.random()-0.5)*0.15, 0)),
+        new THREE.Vector3(0, 0.3, 0), 0.7, 0.3 + Math.random() * 0.25, 0xfff6d8, 0);
+    }
+    if (st.t > st.life) shootingStar = null;
+  }
+
+  // pháo bông tóe ra từ topper tim khi thổi hết nến
+  if (t < sparkleUntil) {
+    for (let i = 0; i < 8; i++) {
+      const v = new THREE.Vector3((Math.random()-0.5)*3.2, 1.8 + Math.random()*3.6, (Math.random()-0.5)*3.2);
+      spawnSpark(new THREE.Vector3(0, TOP3 + 2.15, 0), v, 0.5 + Math.random() * 0.5, 0.17,
+        Math.random() < 0.35 ? 0xffffff : 0xffd98c, 2.5);
+    }
+  }
+
+  // cập nhật mọi hạt sáng
+  for (let i = sparks.length - 1; i >= 0; i--) {
+    const p = sparks[i];
+    p.t += dt;
+    const k = p.t / p.life;
+    if (k >= 1) {
+      scene.remove(p.spr);
+      p.spr.material.dispose();
+      sparks.splice(i, 1);
+      continue;
+    }
+    p.vel.y -= p.grav * dt;
+    p.spr.position.addScaledVector(p.vel, dt);
+    p.spr.material.opacity = 0.9 * (1 - k);
+  }
+
+  composer.render();
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  tick(Math.min(clock.getDelta(), 0.05));
   if (!loaderHidden) {
     loaderHidden = true;
     document.getElementById('loader').classList.add('hide');
@@ -1080,6 +1304,9 @@ window.__debug = {
     return url;
   },
   blowAll() { candles.forEach((c, i) => blowOut(i)); },
+  step(n = 60, dt = 1 / 60) { for (let i = 0; i < n; i++) tick(dt); },
+  cam() { return { pos: camera.position.toArray().map(v => +v.toFixed(2)), fov: camera.fov, aspect: +camera.aspect.toFixed(3) }; },
+  stats() { return { sparks: sparks.length, tSim: +tSim.toFixed(2), sparkleUntil: +sparkleUntil.toFixed(2), confettiOn: confetti.active, smokes: smokes.length }; },
   candles
 };
 </script>
