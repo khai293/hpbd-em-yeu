@@ -11,9 +11,12 @@ Một chiếc bánh sinh nhật matcha 3 tầng xanh–trắng lung linh dưới
 - 💫 **Sao băng** thỉnh thoảng lướt qua bầu trời — và chắc chắn xuất hiện đúng lúc thổi nến để kịp ước
 - 🌕 Trăng tròn tỏa quầng sáng ấm, đom đóm lập lòe quanh bánh, dây đèn vàng nhấp nháy quanh mâm
 - ❤ Trái tim hồng & **xanh dương** bay lơ lửng, cánh hoa rơi, hạt bokeh lấp lánh, hiệu ứng bloom
-- 🎵 Nhạc Happy Birthday phong cách hộp nhạc có bè trầm (WebAudio, tự cất lên khi chạm màn hình)
-- 💌 Tấm thiệp tình yêu với hiệu ứng gõ chữ, biển sô-cô-la trắng khắc tên **Hạnh**
+- 🎵 Nhạc nền: **"Đây Là Bài Hát Sinh Nhật" — Bùi Công Nam x Cái Lò Nướng x Fillinus** (tự cất lên khi chạm màn hình); mọi ánh sáng — nến, dây đèn, topper, độ rực — **nhún theo nhịp bass** của bài hát. Nếu nhạc không tải được sẽ tự chuyển sang bản hộp nhạc Happy Birthday tổng hợp bằng WebAudio
+- 🎈 **Chạm để nghịch**: chọc nổ 6 quả bóng bay (tự thổi lại), búng dâu tây / cherry / việt quất / macaron cho nhảy tưng tưng, mở hộp quà đỏ nhận lời chúc ngẫu nhiên, chạm mặt trăng để gọi sao băng, chạm topper tim cho xoay tít phun pháo bông — đủ trò vui cho trọn bài hát
+- 💌 Tấm thiệp với hiệu ứng gõ chữ, biển sô-cô-la trắng khắc tên **Hạnh**
 - 📱 Xoay bánh bằng chuột / chạm, chạy mượt trên điện thoại
+
+> Nhạc trong repo chỉ dùng cho mục đích cá nhân, phi thương mại. Bản quyền bài hát thuộc về Bùi Công Nam x Cái Lò Nướng x Fillinus.
 
 ## 🎁 Tùy biến món quà
 
