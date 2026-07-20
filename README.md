@@ -12,7 +12,15 @@ Một chiếc bánh sinh nhật matcha 3 tầng xanh–trắng lung linh dưới
 - 🌕 Trăng tròn tỏa quầng sáng ấm, đom đóm lập lòe quanh bánh, dây đèn vàng nhấp nháy quanh mâm
 - ❤ Trái tim hồng & **xanh dương** bay lơ lửng, cánh hoa rơi, hạt bokeh lấp lánh, hiệu ứng bloom
 - 🎵 Nhạc nền: **"Đây Là Bài Hát Sinh Nhật" — Bùi Công Nam x Cái Lò Nướng x Fillinus** (tự cất lên khi chạm màn hình); mọi ánh sáng — nến, dây đèn, topper, độ rực — **nhún theo nhịp bass** của bài hát. Nếu nhạc không tải được sẽ tự chuyển sang bản hộp nhạc Happy Birthday tổng hợp bằng WebAudio
-- 🎈 **Chạm để nghịch**: chọc nổ 6 quả bóng bay (tự thổi lại), búng dâu tây / cherry / việt quất / macaron cho nhảy tưng tưng, mở hộp quà đỏ nhận lời chúc ngẫu nhiên, chạm mặt trăng để gọi sao băng, chạm topper tim cho xoay tít phun pháo bông — đủ trò vui cho trọn bài hát
+- 🎈 **Chạm để nghịch** (đủ trò cho trọn bài hát):
+  - Chọc nổ 6 quả bóng bay (tự thổi lại sau vài giây)
+  - 🎆 Chạm bầu trời trống → pháo hoa nở ngay chỗ chạm, đổi màu từng phát
+  - 🎹 Trái cây & macaron là phím đàn — mỗi món một nốt hộp nhạc, gõ thành giai điệu được
+  - 🍮 Chọc thân bánh → cả bánh rung như thạch
+  - 🪩 Chạm mâm vàng → dây đèn nhảy disco 7 màu trong 6 giây
+  - ❤ Chạm trái tim bay → vỡ thành mưa tim nhỏ
+  - 🕯 Chạm nến đã tắt → quẹt diêm thắp lại từng cây
+  - 🎁 Mở hộp quà đỏ nhận lời chúc ngẫu nhiên, 🌕 chạm trăng gọi sao băng, chạm topper tim xoay tít phun pháo bông
 - 💌 Tấm thiệp với hiệu ứng gõ chữ, biển sô-cô-la trắng khắc tên **Hạnh**
 - 📱 Xoay bánh bằng chuột / chạm, chạy mượt trên điện thoại
 
