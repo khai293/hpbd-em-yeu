@@ -1091,7 +1091,7 @@ function spawnSmoke(worldPos) {
 let actx = null, master = null, delaySend = null;
 let musicOn = false, musicTimer = null, mIdx = 0, mNext = 0, bIdx = 0, bNext = 0;
 // bài hát thật + phân tích phổ để hiệu ứng nhún theo nhạc
-let songEl = null, analyser = null, freqData = null, songOk = true, bassLvl = 0;
+let songEl = null, analyser = null, freqData = null, songOk = true, bassLvl = 0, needSongRetry = false;
 const BEAT = 0.62;
 const SEMI = { C:0,'C#':1,D:2,'D#':3,E:4,F:5,'F#':6,G:7,'G#':8,A:9,'A#':10,B:11 };
 function nFreq(n) {
@@ -1137,6 +1137,8 @@ function initAudio() {
   songSource.connect(songGain);
   songGain.connect(analyser);
   analyser.connect(master);
+  // iOS/Android: context có thể sinh ra ở trạng thái suspended kể cả trong cử chỉ
+  if (actx.state === 'suspended') actx.resume();
 }
 function mbNote(f, t, dur, vol) {
   const o = actx.createOscillator(); o.type = 'sine'; o.frequency.value = f;
@@ -1187,10 +1189,13 @@ function startMusic() {
   initAudio();
   musicOn = true;
   musicBtn.textContent = '🔊 Nhạc: Bật';
+  if (actx.state === 'suspended') actx.resume();
   if (songOk && songEl) {
-    songEl.play().catch(() => { songOk = false; startMusicBox(); });
+    const p = songEl.play();
+    // bị autoplay chặn → KHÔNG bỏ cuộc, sẽ thử lại ở cú chạm kế tiếp
+    if (p) p.then(() => { needSongRetry = false; }).catch(() => { needSongRetry = true; });
   } else {
-    startMusicBox(); // dự phòng: hộp nhạc tự tổng hợp
+    startMusicBox(); // dự phòng: hộp nhạc tự tổng hợp (khi file mp3 lỗi/không tải được)
   }
 }
 function stopMusic() {
@@ -1324,16 +1329,28 @@ function showToast(msg) {
 let moonCoolAt = 0, topperKick = 0, topperAngle = 0, jiggleT = 9, discoUntil = -1;
 
 function firstGesture() {
-  if (firstGestureDone) return;
-  firstGestureDone = true;
-  startMusic(); // nhạc tự cất lên ở lần chạm đầu tiên
+  // QUAN TRỌNG: chỉ gọi trong pointerup/click — trên màn hình cảm ứng,
+  // pointerdown KHÔNG được trình duyệt tính là cử chỉ mở khóa âm thanh
+  if (!firstGestureDone) {
+    firstGestureDone = true;
+    startMusic(); // nhạc tự cất lên ở lần chạm đầu tiên
+    return;
+  }
+  // các cú chạm sau: nếu lần trước trình duyệt chặn thì thử phát lại
+  if (musicOn && actx) {
+    if (actx.state === 'suspended') actx.resume();
+    if (needSongRetry && songOk && songEl && songEl.paused) {
+      const p = songEl.play();
+      if (p) p.then(() => { needSongRetry = false; }).catch(() => {});
+    }
+  }
 }
 window.addEventListener('pointerdown', e => {
-  // nếu chạm đầu tiên là vào nút nhạc thì nhường cho nút xử lý, tránh bật-tắt kép
-  if (!e.target.closest('#musicBtn')) firstGesture();
   downX = e.clientX; downY = e.clientY;
 });
 window.addEventListener('pointerup', e => {
+  // nếu chạm vào nút nhạc thì nhường cho nút xử lý, tránh bật-tắt kép
+  if (!e.target.closest('#musicBtn')) firstGesture();
   if (Math.hypot(e.clientX - downX, e.clientY - downY) > 7) return;
   if (e.target.closest('#controls,#letterModal,#wishOverlay')) return;
   pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -1464,6 +1481,14 @@ function typeLetter() {
   }
   step();
 }
+
+// điện thoại: quay lại tab thì phát tiếp nhạc (mobile hay tự pause khi ẩn tab)
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && musicOn && songOk && songEl && songEl.paused) {
+    const p = songEl.play();
+    if (p) p.catch(() => { needSongRetry = true; });
+  }
+});
 
 setTimeout(() => hintEl.classList.add('hide'), 9000);
 
